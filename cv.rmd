@@ -52,13 +52,8 @@ datadrivencv::build_network_logo(CV$entries_data)
 ```
 
 
-```{r}
-if(params$pdf_mode){
-  cat("View this CV online with links at _https://github.com/iamericfletcher/resume_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/iamericfletcher/resume)")
-}
-```
+
+
 
 Contact {#contact}
 --------------------------------------------------------------------------------
@@ -81,9 +76,9 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
 
-The source code is available [on github.com/nstrayer/cv](https://github.com/iamericfletcher/resume).
+
+
 
 Last updated on `r Sys.Date()`.
 
@@ -111,7 +106,7 @@ CV %<>% print_section('education')
 
 
 
-Research Experience {data-icon=laptop}
+Industry Experience {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -120,7 +115,7 @@ CV %<>% print_section('research_positions')
 
 
 
-Industry Experience {data-icon=suitcase}
+Volunteer Experience {data-icon=hands-holding}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -138,7 +133,7 @@ CV %<>% print_section('industry_positions')
 <br>
 <br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
+Accomplishments {data-icon=thumbs-up}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -150,55 +145,3 @@ CV %<>% print_text_block('teaching_experience_aside')
 ```{r}
 CV %<>% print_section('teaching_positions')
 ```
-
-
-
-Selected Data Science Writing {data-icon=chart-line}
---------------------------------------------------------------------------------
-
-::: aside
-```{r}
-CV %<>% print_text_block('data_science_writing_aside')
-```
-:::
-
-```{r}
-CV %<>% print_section('data_science_writings')
-```
-
-
-
-Selected Press (About)  {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('about_me_press')
-```
-
-
-<br>
-<br>
-
-
-Selected Press (By)  {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('by_me_press')
-```
-
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('academic_articles')
-```
-
-
-
-```{r}
-CV %<>% print_links()
-```
-
