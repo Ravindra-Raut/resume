@@ -45,32 +45,38 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
-```{r}
-# Build interactive network of positions colored by section
-# and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
-```
+<img src="profile_pic_circular.png" alt="profile">
+
 
 
 ```{r}
-if(params$pdf_mode){
-  cat("View this CV online with links at _https://github.com/iamericfletcher/resume_")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/iamericfletcher/resume)")
-}
+# if(params$pdf_mode){
+#   cat("View this CV online with links at _https://github.com/iamericfletcher/resume_")
+# } else {
+#   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/iamericfletcher/resume)")
+# }
 ```
 
 
 Contact {#contact}
 --------------------------------------------------------------------------------
 
-```{r}
-CV %>% print_contact_info()
-```
+
+- <i class="fa fa-envelope"></i> EricFletcher3@gmail.com
+
+- <i class="fa fa-linkedin"></i> [iamericfletcher](https://www.linkedin.com/in/iamericfletcher/)
+
+- <i class="fa fa-github"></i> [iamericfletcher](https://github.com/iamericfletcher)
+
+- <i class="fa fa-stack-overflow"></i> [iamericfletcher](https://stackoverflow.com/users/13356730/iamericfletcher?tab=profile)
+
+- <i class="fa fa-twitter"></i> [iamericfletcher](https://twitter.com/iamericfletcher)
+
+- <i class="fa fa-home"></i> [Blog](http://iamericfletcher.github.io/distill_blog/)
 
 
 
-Language Skills {#skills}
+Tech Skills {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -144,14 +150,10 @@ Accomplishments {data-icon=thumbs-up}
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('teaching_experience_aside')
+CV %<>% print_text_block('accomplishments_aside')
 ```
 :::
 
 ```{r}
-CV %<>% print_section('teaching_positions')
-```
-
-```{r}
-CV %<>% print_links()
+CV %<>% print_section('accomplishments')
 ```

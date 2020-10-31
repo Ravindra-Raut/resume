@@ -41,7 +41,7 @@ create_CV_object <-  function(data_location,
       googlesheets4::read_sheet(data_location, sheet = sheet_id, skip = 1, col_types = "c")
     }
     cv$entries_data  <- read_gsheet(sheet_id = "entries")
-    cv$skills        <- read_gsheet(sheet_id = "language_skills")
+    cv$skills        <- read_gsheet(sheet_id = "tech_skills")
     cv$text_blocks   <- read_gsheet(sheet_id = "text_blocks")
     cv$contact_info  <- read_gsheet(sheet_id = "contact_info")
   } else {
@@ -206,35 +206,36 @@ print_skill_bars <- function(cv, out_of = 5, bar_color = "#969696", bar_backgrou
 
 
 
-#' @description List of all links in document labeled by their superscript integer.
-print_links <- function(cv) {
-  n_links <- length(cv$links)
-  if (n_links > 0) {
-    cat("
-Links {data-icon=link}
---------------------------------------------------------------------------------
+#' #' @description List of all links in document labeled by their superscript integer.
+#' print_links <- function(cv) {
+#'   n_links <- length(cv$links)
+#'   if (n_links > 0) {
+#'     cat("
+#' Links {data-icon=link}
+#' --------------------------------------------------------------------------------
+#' 
+#' <br>
+#' 
+#' 
+#' ")
+#' 
+#'     purrr::walk2(cv$links, 1:n_links, function(link, index) {
+#'       print(glue::glue('{index}. {link}'))
+#'     })
+#'   }
+#' 
+#'   invisible(cv)
+#' }
+#' 
 
-<br>
 
-
-")
-
-    purrr::walk2(cv$links, 1:n_links, function(link, index) {
-      print(glue::glue('{index}. {link}'))
-    })
-  }
-
-  invisible(cv)
-}
-
-
-
-#' @description Contact information section with icons
-print_contact_info <- function(cv){
-  glue::glue_data(
-    cv$contact_info,
-    "- <i class='fa fa-{icon}'></i> {contact}"
-  ) %>% print()
-
-  invisible(cv)
-}
+#' #' @description Contact information section with icons
+#' print_contact_info <- function(cv){
+#'   glue::glue_data(
+#'     cv$contact_info,
+#'     #"- <i class='fa fa-{icon}'></i> {contact}"
+#'     "- <i class=`fa fa-{icon}`></i> [text]{contact}"
+#'   ) %>% print()
+#' 
+#'   invisible(cv)
+#' }
