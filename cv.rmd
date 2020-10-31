@@ -45,7 +45,7 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
-<img src="profile-pic.jpeg" alt="profile">
+<img src="profile_pic_circular.png" alt="profile">
 
 
 
