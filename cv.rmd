@@ -130,6 +130,11 @@ CV %<>% print_section('industry_positions')
 Volunteer Experience {data-icon=hands-helping}
 --------------------------------------------------------------------------------
 
+::: aside
+```{r}
+CV %<>% print_text_block('industy_experience_aside')
+```
+:::
 
 
 ```{r}
@@ -144,6 +149,11 @@ CV %<>% print_section('volunteer_positions')
 Accomplishments {data-icon=thumbs-up}
 --------------------------------------------------------------------------------
 
+::: aside
+```{r}
+CV %<>% print_text_block('accomplishments_aside')
+```
+:::
 
 ```{r}
 CV %<>% print_section('accomplishments')
