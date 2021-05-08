@@ -1,6 +1,6 @@
 ---
-title: "Eric S. Fletcher's CV"
-author: Eric S. Fletcher
+title: "Ravindra Raut's CV"
+author: Ravindra Raut
 date: "`r Sys.Date()`"
 params:
   pdf_mode:
@@ -22,7 +22,7 @@ source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1z7MbTZ2VDxFnMxAeEYk6Y8XQdxSfNAhNgFpIMZwE6Wc/edit#gid=917338460",  
+  data_location = "https://docs.google.com/spreadsheets/d/1vSZcNnmwqgQBbtCp1SAwGIUB8cqqa3y6VgNqH3C6Jv8/edit#gid=0",  
   pdf_mode = params$pdf_mode
 )
 
@@ -62,17 +62,17 @@ Contact {#contact}
 --------------------------------------------------------------------------------
 
 
-- <i class="fa fa-envelope"></i> EricFletcher3@gmail.com
+- <i class="fa fa-envelope"></i> raviraut206@gmail.com
 
-- <i class="fa fa-linkedin"></i> [iamericfletcher](https://www.linkedin.com/in/iamericfletcher/)
+- <i class="fa fa-linkedin"></i> [ravindra-raut](https://www.linkedin.com/in/ravindra-raut-9402bb69/)
 
-- <i class="fa fa-github"></i> [iamericfletcher](https://github.com/iamericfletcher)
+- <i class="fa fa-github"></i> [Ravindra-Raut](https://github.com/Ravindra-Raut)
 
-- <i class="fa fa-stack-overflow"></i> [iamericfletcher](https://stackoverflow.com/users/13356730/iamericfletcher?tab=profile)
+- <i class="fa fa-stack-overflow"></i> [Ravindra-Raut](https://stackoverflow.com/users/13857407/ravindra-raut?tab=profile)
 
-- <i class="fa fa-twitter"></i> [iamericfletcher](https://twitter.com/iamericfletcher)
+- <i class="fa fa-twitter"></i> [Ravindra__Raut](https://twitter.com/Ravindra__Raut)
 
-- <i class="fa fa-home"></i> [Blog](http://iamericfletcher.github.io/distill_blog/)
+- <i class="fa fa-home"></i> [Website](https://ravindra-raut.netlify.app/)
 
 
 
@@ -99,7 +99,7 @@ Last updated on `r Sys.Date()`.
 Main
 ================================================================================
 
-Eric S. Fletcher {#title}
+Ravindra Raut {#title}
 --------------------------------------------------------------------------------
 
 ```{r}
